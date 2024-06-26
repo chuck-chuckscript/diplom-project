@@ -1,0 +1,1 @@
+export const imageSrc = 'http://z96603x3.beget.tech/server/assets/';

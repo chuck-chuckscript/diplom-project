@@ -1,0 +1,108 @@
+@use '../../../styles/var.scss';
+.commentsList{
+    margin-top: 50px;
+    h2{
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        width: 100%;
+        border-bottom: 1px solid #c2c2c2;
+    }
+    .list{
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+.comment{
+    padding: 15px 10px 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #c2c2c298;
+    box-shadow: 0px 2px 3px 1px #c2c2c2;
+    margin-bottom: 15px;
+    .commentInfo{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: 'avatar name'
+        'avatar date';
+        margin-bottom: 5px;
+        span.commentInfoAvatar{
+            grid-area: avatar;
+            margin-right: 10px;
+        }
+        a.commentInfoName{
+            grid-area: name;
+
+            margin: 0 0 -15px 0;
+            font-size: 15px;
+            color: var.$mainColor;
+        }
+        span.commentInfoDate{
+            grid-area: date;
+            color: #686868;
+            line-height: 1px;
+        }
+        font-size: 12px;
+    }
+    pre{
+        white-space: pre-line;
+        font-family: inherit;
+    }
+    div.commentOptions{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        div{
+            display: flex;
+            align-items: center;
+            button{
+                svg{
+                    transition: .2s ease;
+                }
+            }
+            & > button:first-child:hover{
+                svg{
+                    background-color: green;
+                    border-radius: 5px;
+                    fill: white;
+                }
+                
+            }
+            & > button:nth-child(3):hover{
+                svg{
+                    background-color: red;
+                    border-radius: 5px;
+                    fill: white;
+                }
+            }
+            span{
+                font-size: 14px;
+            }
+        }
+        button{
+            font-size: 20px;
+            background-color: transparent;
+            
+        }
+        & > button:last-child{
+            height: fit-content;
+            width: fit-content;
+            padding: 5px 10px;
+            color: white;
+            background-color: rgb(177, 70, 70);
+            font-size: 12px;
+            transition: .2s ease;
+            &:hover{
+                background-color: transparent;
+                color: rgb(177, 70, 70);
+            }
+        }
+    }
+}
+.commentForm{
+    button{
+        margin-top: 10px;
+    }
+}
